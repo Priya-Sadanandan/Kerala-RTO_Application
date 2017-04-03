@@ -1,0 +1,15 @@
+<h1>Welcome to Kerala's RTO locator!</h1>
+
+<%= form_for :rtocode do |f| %>
+  <p>
+    <b><%= f.label :code, "Please enter the code" %><br></b>
+    <%= f.text_field :integer %>
+  </p>
+ 
+ 
+  <p>
+    <%= f.submit "Search" %>
+  </p>
+<% end %>
+
+<%= link_to 'List of RTOs', rtocodes_path %>

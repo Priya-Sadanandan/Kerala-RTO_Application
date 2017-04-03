@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @rtocode.code %>
+</p>
+
+<p>
+  <strong>Office:</strong>
+  <%= @rtocode.office %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @rtocode.district %>
+</p>
+
+<%= link_to 'Edit', edit_rtocode_path(@rtocode) %> |
+<%= link_to 'Back', rtocodes_path %>

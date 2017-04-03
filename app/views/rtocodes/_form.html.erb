@@ -1,0 +1,32 @@
+<%= form_for(rtocode) do |f| %>
+  <% if rtocode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rtocode.errors.count, "error") %> prohibited this rtocode from being saved:</h2>
+
+      <ul>
+      <% rtocode.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code %>
+    <%= f.number_field :code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :office %>
+    <%= f.text_field :office %>
+  </div>
+
+  <div class="field">
+    <%= f.label :district %>
+    <%= f.text_field :district %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

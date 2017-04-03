@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rtocodes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Office</th>
+      <th>District</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rtocodes.each do |rtocode| %>
+      <tr>
+        <td><%= rtocode.code %></td>
+        <td><%= rtocode.office %></td>
+        <td><%= rtocode.district %></td>
+        <td><%= link_to 'Show', rtocode %></td>
+        <td><%= link_to 'Edit', edit_rtocode_path(rtocode) %></td>
+        <td><%= link_to 'Destroy', rtocode, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rtocode', new_rtocode_path %>
