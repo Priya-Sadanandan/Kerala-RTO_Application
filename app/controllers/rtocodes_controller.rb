@@ -4,23 +4,6 @@ class RtocodesController < ApplicationController
 
   http_basic_authenticate_with name: "rtoadmin", password: "secret", realm: "Only RTO adminstrators have the authority to Edit/Delete/Add new RTO codes!", except: [:index, :show, :search]
 
-#  # Welcome/Home page
-#  def search
-#  @current_time = Time.now.to_formatted_s(:short)
-#  @greet_message = case Time.now.hour
-#  when 5..11
-#    "Good Morning! Have a good day!"
-#  when 12..15
-#    "Good Afternoon!"
-#  when 16..19
-#    "Good Evening!"
-#  when 20..24, 0..4
-#    "Good Night!"
-#  end
-#  #   @rtocode = Rtocode.find(params[:code])
-#  #  render html: "Welcome to RTO App!"
-#  end
-
   # GET /rtocodes
   # GET /rtocodes.json
   def index
@@ -84,7 +67,6 @@ class RtocodesController < ApplicationController
 
   # Searching the text
   def search
-
   @current_time = Time.now.to_formatted_s(:short)
   @greet_message = case Time.now.hour
   when 5..11
@@ -96,11 +78,10 @@ class RtocodesController < ApplicationController
   when 20..24, 0..4
     "Good Night!"
   end
-
     @rtocodes = Rtocode.all
     if params[:search]
-  #    @rtocodes = Rtocode.search(params[:search])
-      @rtocodes = Rtocode.search(params[:search]).order("created_at DESC")
+      @rtocodes = Rtocode.search(params[:search])
+  #    @rtocodes = Rtocode.search(params[:search]).order("created_at DESC")
     else
       @rtocodes = Rtocode.all.order("created_at DESC")
     end

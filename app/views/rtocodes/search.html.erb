@@ -6,8 +6,8 @@
 
 
 <%= form_tag(rtocodes_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Search Rtocodes" %>
-<%= submit_tag "Search" %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Rtocodes" %>
+    <%= submit_tag "Search", :name => nil %>
 <% end %>
 
 
