@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<% if @rtocodes.present? %>
+
+<% if @rtocodes.blank? %>
+  <h1>There are no entries containing the term <%= params[:search] %>.</h1>
+  else
 
 <h1>Rtocodes</h1>
 
@@ -28,16 +31,12 @@
   </tbody>
 </table>
 
-<% else %>
-  <h1>There are no entries containing the term '<%= params[:search] %>'.</h1>
+<br>
 
 <% end %>
 
 <br>
 <br>
-<%= link_to 'Add new Rtocode', new_rtocode_path %>
-
-<br>
-<br>
-<%= link_to 'Search another term', root_path %>
-
+<%= link_to 'Search again', search_rtocode_path %>
+~                                                                                                                                                                                                           
+~                                                         

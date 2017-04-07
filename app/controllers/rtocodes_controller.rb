@@ -8,6 +8,16 @@ class RtocodesController < ApplicationController
   # GET /rtocodes.json
   def index
     @rtocodes = Rtocode.all
+  
+  #Listing the data with 'search term'
+  
+  if params[:search]
+      @rtocodes = Rtocode.search(params[:search])
+  #    @rtocodes = Rtocode.search(params[:search]).order("created_at DESC")
+    else
+      @rtocodes = Rtocode.all.order("created_at DESC")
+    end
+
   end
 
   # GET /rtocodes/1
@@ -78,13 +88,6 @@ class RtocodesController < ApplicationController
   when 20..24, 0..4
     "Good Night!"
   end
-    @rtocodes = Rtocode.all
-    if params[:search]
-      @rtocodes = Rtocode.search(params[:search])
-  #    @rtocodes = Rtocode.search(params[:search]).order("created_at DESC")
-    else
-      @rtocodes = Rtocode.all.order("created_at DESC")
-    end
   end
 
 
