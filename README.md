@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version I used -- ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+* Rails version I used -- Rails 5.0.2
 
-Things you may want to cover:
+Kerala-RTO_Application ia a simple Rails application which enables us to perform the below actions:
 
-* Ruby version
+-- Simple rails search for searching a field in RTO database ## http://localhost:3000 ##
+-- Listing all the RTO codes and office locations ## http://localhost:3000/rtocodes ##
+-- Adding/Editing/Destroying RTO codes, which can be done only by administrators of RTO offices.Only authentcated users can perform these actions.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Currently working on improvising the application!
