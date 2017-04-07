@@ -6,7 +6,11 @@
 Kerala-RTO_Application ia a simple Rails application which enables us to perform the below actions:
 
 -- Simple rails search for searching a field in RTO database ## http://localhost:3000 ##
+
+
 -- Listing all the RTO codes and office locations ## http://localhost:3000/rtocodes ##
+
+
 -- Adding/Editing/Destroying RTO codes, which can be done only by administrators of RTO offices.Only authentcated users can perform these actions.
 
 Currently working on improvising the application!
